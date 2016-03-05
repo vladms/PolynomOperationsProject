@@ -1,0 +1,5 @@
+2016-03-05 11:55:56,400 [Worker-14] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: ro.utcn.pt:Lab1:0.0.1-SNAPSHOT @ /Users/VladBonta/Applications/PolynomProject/Lab1/pom.xml.
+2016-03-05 11:55:57,120 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-05 11:55:57,126 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-03-05 11:55:57,129 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-05 11:55:57,129 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
