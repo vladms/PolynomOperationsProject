@@ -54,7 +54,7 @@ public class AppLogic implements AppInterfaceButtonEvents {
 		}
 	}
 
-	public String polynomToString(Polynom polynom) {
+	public static String polynomToString(Polynom polynom) {
 		int polynomDegree = polynom.getNumberOfTerms();
 		String polynomString = "";
 		for (int index = 0; index < polynomDegree;index++){
