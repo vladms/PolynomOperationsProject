@@ -39,6 +39,17 @@ public class Polynom {
 		}
 	}
 	
+	public String polynomToString() {
+		int polynomDegree = getNumberOfTerms();
+		String polynomString = "";
+		for (int index = 0; index < polynomDegree;index++){
+			Term term = terms.get(index);
+			polynomString += term.termToString(index);
+		}
+
+		return polynomString.replace(" ", "");
+	}
+	
 	public void addTerm(Term term){
 		this.terms.add(term);
 	}

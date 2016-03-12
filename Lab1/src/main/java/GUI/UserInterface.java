@@ -140,6 +140,7 @@ public class UserInterface {
 	
 
 	public void showResultPolynom(String polynomString) {
+		System.out.println("Show result Polynom");
 		System.out.println(polynomString);
 		resultPolynomTextArea.setText(polynomString);
 		

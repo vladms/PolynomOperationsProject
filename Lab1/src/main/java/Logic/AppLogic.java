@@ -7,6 +7,13 @@ import Model.Term;
 import Utils.Operations;
 import GUI.AppInterfaceButtonEvents;
 
+/**  
+* AppLogic.java - a simple class for demonstrating the use of javadoc comments.  
+* @author  Vlad Bonta
+* @version 1.0 
+* @see Main
+*/
+
 public class AppLogic implements AppInterfaceButtonEvents {
 	private UserInterface userInterface;
 	private Polynom firstPolynom;
@@ -23,48 +30,33 @@ public class AppLogic implements AppInterfaceButtonEvents {
 
 		switch (operationString) {
 		case "Add polynoms":
+			System.out.println("Add operation");
 			resultPolynom = Operations.addPolynoms(firstPolynom, secondPolynom);
-			userInterface.showResultPolynom(polynomToString(resultPolynom));
+			userInterface.showResultPolynom(resultPolynom.polynomToString());
 			break;
 		case "Subtract polynoms":
 			resultPolynom = Operations.subPolynoms(firstPolynom, secondPolynom);
-			userInterface.showResultPolynom(polynomToString(resultPolynom));
+			userInterface.showResultPolynom(resultPolynom.polynomToString());
 			break;
 		case "Multiply polynoms":
 			resultPolynom = Operations.mulPolynoms(firstPolynom, secondPolynom);
-			userInterface.showResultPolynom(polynomToString(resultPolynom));
+			userInterface.showResultPolynom(resultPolynom.polynomToString());
 			break;
 		case "Divide polynoms":
-			
 			DivisionPolynoms divisionResult = Operations.divPolynoms(firstPolynom, secondPolynom);
-			userInterface.showResultPolynom(polynomToString(divisionResult.getQuotientPolynom()), polynomToString(divisionResult.getRemainderPolynom()));
+			userInterface.showResultPolynom(divisionResult.getQuotientPolynom().polynomToString(), divisionResult.getRemainderPolynom().polynomToString());
 			break;
 		case "Derivate polynom":
 			resultPolynom = Operations.derivatePolynom(firstPolynom);
-			userInterface.showResultPolynom(polynomToString(resultPolynom));
-
+			userInterface.showResultPolynom(resultPolynom.polynomToString());
 			break;
-
 		case "Integrate polynom":
 			resultPolynom = Operations.integratePolynom(firstPolynom);
-			userInterface.showResultPolynom(polynomToString(resultPolynom));
+			userInterface.showResultPolynom(resultPolynom.polynomToString());
 			break;
 		default:
 			break;
 		}
 	}
-
-	public static String polynomToString(Polynom polynom) {
-		int polynomDegree = polynom.getNumberOfTerms();
-		String polynomString = "";
-		for (int index = 0; index < polynomDegree;index++){
-			Term term = polynom.getTerms().get(index);
-			polynomString += term.termToString(index);
-		}
-
-		return polynomString;
-	}
-
-	
 
 }
