@@ -65,8 +65,7 @@ public class Term {
 		return termString;
 	}
 	
-	public static String floatFormat(float d)
-	{
+	public static String floatFormat(float d){
 	    if(d == (long) d)
 	        return String.format("%d",(long)d);
 	    else
