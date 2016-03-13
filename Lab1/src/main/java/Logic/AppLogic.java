@@ -8,10 +8,8 @@ import Utils.Operations;
 import GUI.AppInterfaceButtonEvents;
 
 /**  
-* AppLogic.java - a simple class for demonstrating the use of javadoc comments.  
+* AppLogic.java - AppLogic class is the controller of the entire application. User interface and operations are called from here.
 * @author  Vlad Bonta
-* @version 1.0 
-* @see Main
 */
 
 public class AppLogic implements AppInterfaceButtonEvents {

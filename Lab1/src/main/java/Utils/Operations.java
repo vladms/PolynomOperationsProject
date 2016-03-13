@@ -3,7 +3,10 @@ package Utils;
 import Model.DivisionPolynoms;
 import Model.Polynom;
 import Model.Term;
-
+/**  
+* Operations.java - Operations class implements the all operations on the polynoms.
+* @author  Vlad Bonta
+*/
 public class Operations {
 	public static Polynom addPolynoms(Polynom firstPolynom, Polynom secondPolynom) {
 		Polynom resultPolynom = new Polynom();

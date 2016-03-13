@@ -1,5 +1,9 @@
 package Model;
-
+/**  
+* Term.java - Term class is the representation of a monome. It has real coefficient and integer degree.
+* @author  Vlad Bonta
+* @see Polynom
+*/
 public class Term {
 	private float coefficient;
 	private int degree;

@@ -1,6 +1,5 @@
 package Test;
 
-import Logic.AppLogic;
 import Model.DivisionPolynoms;
 import Model.Polynom;
 import Model.Term;
@@ -61,15 +60,8 @@ public class OperationsTests {
 		secondPolynom.addTerm(term);
 		term = new Term(-2,0);
 		secondPolynom.addTerm(term);	
-		System.out.println(firstPolynom.polynomToString());
-		System.out.println("\n");
-		System.out.println(secondPolynom.polynomToString());
 		divisionPolynomResult = Operations.divPolynoms(firstPolynom, secondPolynom);
 		
-		System.out.println("Result==");
-		System.out.println("Quotient" + divisionPolynomResult.getQuotientPolynom().polynomToString());
-		System.out.println("\n");
-		System.out.println(divisionPolynomResult.getRemainderPolynom().polynomToString());
 
 		assertEquals(divisionPolynomResult.getQuotientPolynom().polynomToString(), "1.0X+6.0".replace(" ", ""));
 		assertEquals(divisionPolynomResult.getRemainderPolynom().polynomToString(), "4.0".replace(" ", ""));

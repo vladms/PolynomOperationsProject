@@ -3,7 +3,11 @@ package Model;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+/**  
+* Polynom.java - Polynom class saves the list of terms.
+* @author  Vlad Bonta
+* @see Term
+*/
 public class Polynom {
 	private ArrayList<Term> terms;
 

@@ -12,12 +12,16 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
+/**  
+* UserInterface.java - UserInterface class handles the UI of the application. It announce the controller when something occured.
+* @author  Vlad Bonta
+*/
 public class UserInterface {
 	private AppInterfaceButtonEvents buttonEventHandler;
 
 	private JFrame mainFrame;
 	private JPanel controlPanel;
+	private JLabel hintLabel;
 	private JPanel polynomsPanel;
 	private JPanel resultPanel;
 	JLabel resultPolynomTextArea = new JLabel();
@@ -59,10 +63,14 @@ public class UserInterface {
 		resultPanel.setLayout(new GridLayout(1, 1));
 		resultPanel.add(resultPolynomTextArea);
 
+		hintLabel = new JLabel();
+		hintLabel.setLayout(new GridLayout(1, 1));
+		hintLabel.setText("Example: 2x^6+3x^2+1x^1+1x^0");
 		mainFrame.add(controlPanel);
 		mainFrame.add(polynomsPanel);
+		mainFrame.add(hintLabel);
 		mainFrame.add(resultPanel);
-
+		
 		mainFrame.setVisible(true);
 	}
 

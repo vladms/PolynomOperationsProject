@@ -1,5 +1,9 @@
 package Model;
-
+/**  
+* DivisionPolynoms.java - DivisionPolynoms class handles with the result of the division of two polynomials, the result being saved in a quotientPolynom and a remainderPolynom.
+* @author  Vlad Bonta
+* @see Operations
+*/
 public class DivisionPolynoms {
 	private Polynom quotientPolynom = new Polynom();
 	private Polynom remainderPolynom = new Polynom();
