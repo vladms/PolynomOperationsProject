@@ -36,30 +36,41 @@ public class Term {
 
 	public String termToString(int index) {
 		String termString = "";
-
+		System.out.println(coefficient + " "+ index);
 		if (coefficient == 0) {
-			termString = "0 ";
+			termString = " 0 ";
 		} else if (this.coefficient < 0) {
 			if (this.degree == 0) {
 				termString = String.valueOf(this.coefficient);
 			} else if (this.degree == 1) {
-				termString = this.coefficient + "X";
+				termString = floatFormat(this.coefficient) + "X";
 			} else {
-				termString = this.coefficient + "X^" + superscript(String.valueOf(this.degree)) + " ";
+				termString = floatFormat(this.coefficient) + "X^" + superscript(String.valueOf(this.degree)) + " ";
 			}
 		} else {
 			if (this.degree == 0) {
-				termString = "+" + this.coefficient;
+				termString = "+" + floatFormat(this.coefficient);
 			} else if (this.degree == 1) {
-				termString = "+" + this.coefficient + "X";
+				termString = "+" + floatFormat(this.coefficient) + "X";
 			} else {
-				termString = "+" + this.coefficient + "X^" + superscript(String.valueOf(this.degree)) + " ";
+				termString = "+" + floatFormat(this.coefficient) + "X^" + superscript(String.valueOf(this.degree)) + " ";
 			}
 		}
 		if (index == 0) {
 			termString = termString.substring(1, termString.length());
 		}
+		if (termString.equals("0 ") && index != 0 ){
+			termString = "";
+		}
 		return termString;
+	}
+	
+	public static String floatFormat(float d)
+	{
+	    if(d == (long) d)
+	        return String.format("%d",(long)d);
+	    else
+	        return String.format("%s",d);
 	}
 
 	public static String superscript(String str) {

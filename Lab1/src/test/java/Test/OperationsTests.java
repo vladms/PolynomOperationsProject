@@ -30,19 +30,24 @@ public class OperationsTests {
 	@Test
 	public void testAddPolynoms() {
 		resultPolynom = Operations.addPolynoms(firstPolynom, secondPolynom);
-		assertEquals(resultPolynom.polynomToString(),"10.0X^¹⁰⁰ +8.0X^⁶⁴ +6.0X^³⁶ +5.0X^²⁵ +8.0X^¹⁶ +3.0X^⁹ +4.0X^⁴ +1.0X".replace(" ", ""));
+		assertEquals(resultPolynom.polynomToString(),"10X^¹⁰⁰ +8X^⁶⁴ +6X^³⁶ +5X^²⁵ +8X^¹⁶ +3X^⁹ +4X^⁴ +1X".replace(" ", ""));
 	}
 
 	@Test
 	public void testSubPolynoms() {
 		resultPolynom = Operations.subPolynoms(firstPolynom, secondPolynom);
-		assertEquals(resultPolynom.polynomToString(),"10.0X^¹⁰⁰ +8.0X^⁶⁴ +6.0X^³⁶ -5.0X^²⁵ 0 -3.0X^⁹ 0 -1.0X".replace(" ", ""));
+		System.out.println(firstPolynom.polynomToString());
+		System.out.println(secondPolynom.polynomToString());
+		System.out.println(resultPolynom.polynomToString());
+
+		assertEquals(resultPolynom.polynomToString(),"10X^¹⁰⁰ +8X^⁶⁴ +6X^³⁶ -5X^²⁵-3X^⁹-1X".replace(" ", ""));
+
 	}
 
 	@Test
 	public void testMulPolynoms() {
 		resultPolynom = Operations.mulPolynoms(firstPolynom, secondPolynom);
-		assertEquals(resultPolynom.polynomToString(),"50.0X^¹²⁵ +40.0X^¹¹⁶ +30.0X^¹⁰⁹ +20.0X^¹⁰⁴ +10.0X^¹⁰¹ +40.0X^⁸⁹ +32.0X^⁸⁰ +24.0X^⁷³ +16.0X^⁶⁸ +8.0X^⁶⁵ +30.0X^⁶¹ +24.0X^⁵² +18.0X^⁴⁵ +20.0X^⁴¹ +12.0X^⁴⁰ +6.0X^³⁷ +16.0X^³² +10.0X^²⁹ +12.0X^²⁵ +16.0X^²⁰ +4.0X^¹⁷ +6.0X^¹³ +4.0X^⁸ +2.0X^⁵ ".replace(" ", ""));
+		assertEquals(resultPolynom.polynomToString(),"50X^¹²⁵ +40X^¹¹⁶ +30X^¹⁰⁹ +20X^¹⁰⁴ +10X^¹⁰¹ +40X^⁸⁹ +32X^⁸⁰ +24X^⁷³ +16X^⁶⁸ +8X^⁶⁵ +30X^⁶¹ +24X^⁵² +18X^⁴⁵ +20X^⁴¹ +12X^⁴⁰ +6X^³⁷ +16X^³² +10X^²⁹ +12X^²⁵ +16X^²⁰ +4X^¹⁷ +6X^¹³ +4X^⁸ +2X^⁵ ".replace(" ", ""));
 	}
 
 	@Test
@@ -63,8 +68,8 @@ public class OperationsTests {
 		divisionPolynomResult = Operations.divPolynoms(firstPolynom, secondPolynom);
 		
 
-		assertEquals(divisionPolynomResult.getQuotientPolynom().polynomToString(), "1.0X+6.0".replace(" ", ""));
-		assertEquals(divisionPolynomResult.getRemainderPolynom().polynomToString(), "4.0".replace(" ", ""));
+		assertEquals(divisionPolynomResult.getQuotientPolynom().polynomToString(), "1X+6".replace(" ", ""));
+		assertEquals(divisionPolynomResult.getRemainderPolynom().polynomToString(), "4".replace(" ", ""));
 
 	}
 
@@ -72,7 +77,7 @@ public class OperationsTests {
 	public void testDerivation() {
 		resultPolynom = Operations.derivatePolynom(firstPolynom);
 		resultPolynom.polynomToString().replace(" ", "");
-		assertEquals(resultPolynom.polynomToString(),"1000.0X^⁹⁹ +512.0X^⁶³ +216.0X^³⁵ +64.0X^¹⁵ +8.0X^³".replace(" ", ""));
+		assertEquals(resultPolynom.polynomToString(),"1000X^⁹⁹ +512X^⁶³ +216X^³⁵ +64X^¹⁵ +8X^³".replace(" ", ""));
 	}
 
 	@Test

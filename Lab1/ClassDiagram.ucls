@@ -39,7 +39,7 @@
   </class>  
   <class id="5" language="java" name="Main" project="Lab1" file="/Lab1/src/main/java/Main.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="134" y="-4"/>    
+    <position height="-1" width="-1" x="132" y="15"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      

@@ -28,7 +28,6 @@ public class AppLogic implements AppInterfaceButtonEvents {
 
 		switch (operationString) {
 		case "Add polynoms":
-			System.out.println("Add operation");
 			resultPolynom = Operations.addPolynoms(firstPolynom, secondPolynom);
 			userInterface.showResultPolynom(resultPolynom.polynomToString());
 			break;

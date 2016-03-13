@@ -63,7 +63,6 @@ public class Operations {
 	}
 
 	public static Polynom subPolynoms(Polynom firstPolynom, Polynom secondPolynom) {
-
 		Polynom resultPolynom = new Polynom();
 		int firstPolynomNrOfTerms = firstPolynom.getNumberOfTerms();
 		int secondPolynomNrOfTerms = secondPolynom.getNumberOfTerms();
@@ -149,6 +148,7 @@ public class Operations {
 	}
 
 	public static DivisionPolynoms divPolynoms(Polynom firstPolynom, Polynom secondPolynom) {
+		
 		Polynom quotientPolynom = new Polynom();
 		Polynom remainderPolynom = new Polynom();
 

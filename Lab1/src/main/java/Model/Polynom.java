@@ -22,13 +22,10 @@ public class Polynom {
 		Matcher m = p.matcher( polynomString );
 
 		while (m.find()) {
-		    System.err.println("Coef: " + m.group(1));
-		    System.err.println("Degree: " + m.group(2));
 		    Term term = new Term(Float.parseFloat(m.group(1)), Integer.parseInt(m.group(2)));
 		    this.terms.add(term);
 		    
 		}
-        System.err.println(polynomString);
 	}
 	
 	public void clearZeros(){

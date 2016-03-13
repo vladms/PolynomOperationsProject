@@ -148,8 +148,6 @@ public class UserInterface {
 	
 
 	public void showResultPolynom(String polynomString) {
-		System.out.println("Show result Polynom");
-		System.out.println(polynomString);
 		resultPolynomTextArea.setText(polynomString);
 		
 		resultPanel.setVisible(true);
@@ -158,8 +156,6 @@ public class UserInterface {
 	}
 	
 	public void showResultPolynom(String firstPolynomString, String secondPolynomString) {
-		System.out.println(firstPolynomString);
-		System.out.println(secondPolynomString);
 
 		resultPolynomTextArea.setText("Quotient: " + firstPolynomString + "\nRemainder: " + secondPolynomString);
 	
