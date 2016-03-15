@@ -117,7 +117,6 @@ public class Operations {
 
 		}
 		resultPolynom.clearZeros();
-
 		return resultPolynom;
 	}
 

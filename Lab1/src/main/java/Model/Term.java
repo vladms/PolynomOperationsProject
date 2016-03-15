@@ -55,7 +55,7 @@ public class Term {
 				termString = "+" + floatFormat(this.coefficient) + "X^" + superscript(String.valueOf(this.degree)) + " ";
 			}
 		}
-		if (index == 0) {
+		if (index == 0 && this.coefficient >= 0) {
 			termString = termString.substring(1, termString.length());
 		}
 		if (termString.equals("0 ") && index != 0 ){
