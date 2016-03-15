@@ -59,6 +59,8 @@ public class Operations {
 			}
 
 		}
+		resultPolynom.clearZeros();
+
 		return resultPolynom;
 	}
 
@@ -114,6 +116,8 @@ public class Operations {
 			}
 
 		}
+		resultPolynom.clearZeros();
+
 		return resultPolynom;
 	}
 
@@ -144,6 +148,8 @@ public class Operations {
 			resultPolynom = addPolynoms(resultPolynom, auxPolynom);
 			firstPolynomIndex++;
 		}
+		resultPolynom.clearZeros();
+
 		return resultPolynom;
 	}
 
@@ -154,7 +160,7 @@ public class Operations {
 
 		int firstPolynomIndex = 0;
 		int secondPolynomIndex = 0;
-		while(firstPolynom.getTerms().get(0).getDegree() >= secondPolynom.getTerms().get(0).getDegree()){
+		while(firstPolynom.getNumberOfTerms() > 0 && secondPolynom.getNumberOfTerms() > 0 && firstPolynom.getTerms().get(0).getDegree() >= secondPolynom.getTerms().get(0).getDegree()){
 			Term firstPolynomTerm = firstPolynom.getTerms().get(firstPolynomIndex);
 			Term secondPolynomTerm = secondPolynom.getTerms().get(secondPolynomIndex);
 			
@@ -169,6 +175,9 @@ public class Operations {
 			firstPolynom.clearZeros();
 		}
 		remainderPolynom = firstPolynom;
+		remainderPolynom.clearZeros();
+		quotientPolynom.clearZeros();
+
 		return new DivisionPolynoms(quotientPolynom, remainderPolynom);
 	}
 

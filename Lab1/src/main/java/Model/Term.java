@@ -36,7 +36,6 @@ public class Term {
 
 	public String termToString(int index) {
 		String termString = "";
-		System.out.println(coefficient + " "+ index);
 		if (coefficient == 0) {
 			termString = " 0 ";
 		} else if (this.coefficient < 0) {

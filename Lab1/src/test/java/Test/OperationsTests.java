@@ -36,9 +36,9 @@ public class OperationsTests {
 	@Test
 	public void testSubPolynoms() {
 		resultPolynom = Operations.subPolynoms(firstPolynom, secondPolynom);
-		System.out.println(firstPolynom.polynomToString());
-		System.out.println(secondPolynom.polynomToString());
-		System.out.println(resultPolynom.polynomToString());
+		System.out.println("first"+firstPolynom.polynomToString());
+		System.out.println("second"+secondPolynom.polynomToString());
+		System.out.println("result"+resultPolynom.polynomToString());
 
 		assertEquals(resultPolynom.polynomToString(),"10X^¹⁰⁰ +8X^⁶⁴ +6X^³⁶ -5X^²⁵-3X^⁹-1X".replace(" ", ""));
 
